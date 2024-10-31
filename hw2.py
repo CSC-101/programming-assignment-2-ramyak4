@@ -30,6 +30,8 @@ def shorter_duration_than(time1: Duration, time2: Duration) -> bool:
 
 # Part 3
 # This function returns a list of all songs in a given list that are shorter than the given duration
+# input: a list of Song objects, a duration object
+# output: a list of Song objects
 def song_shorter_than(songs: list[Song], time1: Duration) -> list[Song]:
     short_songs = []
     for x in range(0, len(songs)):
@@ -38,6 +40,9 @@ def song_shorter_than(songs: list[Song], time1: Duration) -> list[Song]:
     return short_songs
 
 # Part 4
+# This function calculates the total time of the playlist of songs given
+# input: list of Song objects, list of integers
+# output: one Duration object
 def running_time(songs: list[Song], numbers: list[int]) -> Duration:
     total_time = 0
     for i in numbers:
@@ -45,6 +50,9 @@ def running_time(songs: list[Song], numbers: list[int]) -> Duration:
     return Duration(minutes = total_time // 60, seconds = total_time % 60)
 
 # Part 5
+# This function creates a list of links to different cities and then finds out if a route through all the cities is possible
+# input: a nested list of strings, a list of strings
+# output: a boolean value
 def validate_route(city_links: list[list[str]], route: list[str]) -> bool:
     if len(route) == 0:
         return True
@@ -58,6 +66,9 @@ def validate_route(city_links: list[list[str]], route: list[str]) -> bool:
     return True
 
 # Part 6
+# This functions returns the index at which the longest contiguous repetition begins
+# input: a list of integers
+# output: an optional type of either an integer or None
 def longest_repetition(numbers: list[int]) -> Optional[int]:
     if not numbers:
         return None
